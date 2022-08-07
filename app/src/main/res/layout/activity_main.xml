@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="?colorPrimary"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/searchInPDF2"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/searchInPDF"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/search"
+                android:paddingStart="25.0dip"
+                android:paddingEnd="10.0dip"
+                android:layout_margin="10.0dip"
+                android:layout_weight="1"
+                android:lines="1"
+                android:background="@drawable/bg_search"
+                android:maxLines="1"
+                android:minHeight="48.0dip"
+                android:singleLine="true"
+                android:inputType="text"
+                android:autofillHints="Search word in PDF"/>
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/btn_searchinpdf"
+                android:layout_width="48.0dip"
+                android:layout_margin="10.0dip"
+                android:layout_height="48.0dip"
+                android:background="@drawable/ic_search"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <com.github.barteksc.pdfviewer.PDFView
+            android:id="@+id/pdfview"
+            android:layout_width="match_parent"
+            android:background="?attr/colorSurface"
+            android:layout_height="match_parent"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/nextword"
+        android:layout_width="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16.0dip"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/search"
+        android:text="@string/search"
+        app:backgroundTint="?attr/elevationOverlayColor"
+        app:srcCompat="@drawable/ic_next"
+        app:tint="@null" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
